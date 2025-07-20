@@ -1,8 +1,7 @@
 import graphene
-from crm.schema import Query as CRMQuery, Mutation as CRMMutation
 
 
-class Query(CRMQuery, graphene.ObjectType):
+class Query(graphene.ObjectType):
     hello = graphene.String()
 
     def resolve_hello(root, info):
